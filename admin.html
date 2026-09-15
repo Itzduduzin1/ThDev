@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ThDev — Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <main class="admin-container">
+
+
+        <!-- LOGIN -->
+
+        <section
+            id="login-section"
+            class="login-card"
+        >
+
+            <div class="logo">
+                TH<span>DEV</span>
+            </div>
+
+            <div class="eyebrow">
+                PAINEL ADMINISTRATIVO
+            </div>
+
+            <h1>
+                Entrar
+            </h1>
+
+            <p class="description">
+                Gerencie os projetos do portfolio.
+            </p>
+
+
+            <form id="login-form">
+
+                <label for="password">
+                    Senha
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+                <p
+                    id="login-error"
+                    class="error"
+                ></p>
+
+            </form>
+
+
+            <a
+                href="index.html"
+                class="back"
+            >
+                ← Voltar para o portfolio
+            </a>
+
+        </section>
+
+
+
+        <!-- PAINEL -->
+
+        <section
+            id="admin-panel"
+            class="hidden"
+        >
+
+
+            <header class="admin-header">
+
+                <div>
+
+                    <div class="eyebrow">
+                        THDEV / ADMIN
+                    </div>
+
+                    <h1>
+                        Projetos
+                    </h1>
+
+                </div>
+
+
+                <div class="header-buttons">
+
+                    <a
+                        href="index.html"
+                        class="secondary"
+                    >
+                        Ver site
+                    </a>
+
+                    <button
+                        id="logout-button"
+                        class="secondary"
+                    >
+                        Sair
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ADICIONAR -->
+
+            <section class="form-card">
+
+                <div class="form-title">
+
+                    <div class="eyebrow">
+                        NOVO PROJETO
+                    </div>
+
+                    <h2>
+                        Adicionar projeto
+                    </h2>
+
+                </div>
+
+
+                <form id="project-form">
+
+                    <div class="form-grid">
+
+
+                        <div>
+
+                            <label for="title">
+                                Nome
+                            </label>
+
+                            <input
+                                id="title"
+                                placeholder="Neon District"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div>
+
+                            <label for="type">
+                                Tipo
+                            </label>
+
+                            <input
+                                id="type"
+                                placeholder="Roblox Builder"
+                            >
+
+                        </div>
+
+
+
+                        <div class="full">
+
+                            <label for="image">
+                                URL da imagem
+                            </label>
+
+                            <input
+                                id="image"
+                                type="url"
+                                placeholder="https://..."
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="full">
+
+                            <label for="description">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="description"
+                                rows="4"
+                                placeholder="Descrição do projeto..."
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button type="submit">
+                        Adicionar projeto
+                    </button>
+
+
+                    <p
+                        id="form-message"
+                        class="message"
+                    ></p>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- LISTA -->
+
+            <section>
+
+                <div class="list-header">
+
+                    <h2>
+                        Projetos publicados
+                    </h2>
+
+                    <span id="project-count">
+                        0 projetos
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="project-list"
+                    class="project-list"
+                >
+
+                    <div class="muted">
+                        Carregando...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
